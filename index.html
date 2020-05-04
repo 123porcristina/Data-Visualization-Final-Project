@@ -1,12 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <!--For this project I used information from the World Bank. I followed some tutorial on Youtube, Documentation 
+        from google, laboratories from class and from books. For palette colors: https://colorpalettes.net/color-palette-756/ 
+        other ideas and inspirations: https://dribbble.com/colors/104891?percent=35 , 
+        https://www.designspiration.com/search/saves/?q=%23151994&qa=typed&term_meta%5B%5D=%23151994%7Cspectrum%7Ccolor%7C1 -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Data Visualization: Final Project</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://gstatic.com/charts/loader.js"></script>
+
+
 </head>
 <body>
-    <h1>hello world</h1>
+    <header>
+        <div class="row">
+            <!-- <div class="logo">
+                <img src="" alt="">
+            </div>             -->
+            <!-- menu -->
+            <ul class="main-nav">
+                <li class="active"><a href="#top">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#analysis">ANALYSIS</a></li>
+                <!-- <li><a href="">OTHER</a></li> -->
+            </ul>
+        </div>
+        <!-- title -->
+        <div class="mainTitle">
+            <h1>Educational, Healthcare, and Military Spending in Relation to GDP of the G20 Countries </h1>
+            <div class="button">
+                <a href="https://www.youtube.com/watch?v=z15zLdncteY" class="btn btn-one">Watch Video</a>
+                <a href="#analysis" class="btn btn-two">Explore More</a>
+            </div>
+        </div>
+    </header>
+    <!-- about --> 
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About</h2>
+                    <div class="about-content">
+
+                        <!-- <p> -->
+                            According to wikipedia, G20 is a comglomerate of 20 governments which was founded in 1999. The goal of the G20 is to develop policy with a goal of enhancing financial stability.
+                            G20 countries create the ninety percent of the gross world product and and eighty percent of world trade. <br /><br />
+                            
+                            The members of the G20 are: Australia, Canada, Saudi Arabia, United States, India, Russia, South Africa, Turkey, Argentina, Brazil, Mexico, France, Germany, 
+                            Italy, UK, China, Indonesia, Japan and South Korea. <br /><br />
+                            
+                            This project aims to present, in a user-friendly way, financial information that relates to some of the countries mentioned above, with a focus on healthcare, military and education expenditures over various years. 
+                         <br /><br />
+                            
+                            In the charts, you will be able to observe the following information: <br /><br />
+                            
+                            •	Comparison of the spending data to that country’s GDP <br />
+                            •	Comparison of the education and health to the overall military spending of the country <br />
+                            •	Comparison of the per person educational spending to the per person GDP <br />
+                            •	Comparison the per person healthcare spending to the per person GDP <br />
+                            •	Comparison the per person military spending to the per person GDP <br />
+                            •	Fastest growing countries in healthcare and educational spending in fixed value and in percentage <br />
+                            •	Information was obtained from The World Bank <br />
+                        <!-- </p> -->
+                           
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://en.wikipedia.org/wiki/G20';">Read more</button>
+                </div>
+                <div class="col-md-6">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- analysis -->
+    <section id="analysis">
+        <div class="container">
+            <h1 id="titleAnalysis">Analysis </h1>
+            <div class="row analysis">
+                
+                <!-- creates 3 cols -->
+                <div class="col-md-3 text-center" >
+                    <div class="icon"> <i class="fas fa-computer-speaker"></i>
+                    </div>
+                    <h3> <a href="#analysisHealth">Spending Data</a></h3>
+                    <p>Compare the spending data to that country’s GDP</p>
+                </div>
+
+                <div class="col-md-3 text-center" >
+                    <div class="icon">
+                            <i class="fas fa-computer-speaker2"></i>
+                    </div>
+                    <h3> <a href="#analysisEduMil"> Education and Health</a></h3>
+                    <p>Compare the education and health to the overall military spending of the country</p>
+                </div>
+                
+                <div class="col-md-3 text-center" >
+                    <div class="icon">
+                            <i class="fas fa-computer-speaker3"></i>
+                    </div>
+                    <h3> <a href="#analysisMilitaryEducation">Education, Healthcare and Military</a></h3>
+                    <p>Compare the per capita healthcare, education and military spending to the GDP per capita</p>
+                </div>
+
+                <div class="col-md-3 text-center" >
+                        <div class="icon"><i class="fas fa-computer-speaker4"></i>
+                        </div>
+                        <h3> <a href="#analysisFastFix">Growth</a></h3>
+                        <p>Fastest growing countries in healthcare and educational spending in fixed value and in percentage</p>
+                    </div>
+            </div>
+        </div>
+    </section> 
+
+
+    <!-- plot charts -->
+    <section id="analysisDataGDP">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Spending Education Data vs Country’s GDP</h3>
+                <div class="col-md-8 text-left" >
+                    <!-- Plot %Education vs GDP -->
+                    <div class="ggl-dashboard" id="dashboard_div">
+                        <div class="ggl-control" id="control_div"></div>
+                        <div class="ggl-chart" id="chart_div"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            The chart presented on the left side revels something suprinsing, 
+                            the higher the GDP of a country is the less likely it is to spend on 
+                            education. <br />
+
+                            For instance, if we compare The United States with Turkey, we can see
+                            that even though the US has a larger GDP (billions of USD), the education
+                            spending represents around 5 percent of the GDP. <br />
+
+                            On the other hand, Turkey with a relatively small GDP compare with
+                            The United States of America has an education spending around 12 percent.<br/>
+
+                            That shows that Turkey between the years 2013 and 2018 invested much more 
+                            in Education than the other countries in the G20 Group with more GDP.<br/>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plot %Healthcare vs GDP -->
+    <section id="analysisHealth">
+            <div class="container">
+                <div class="row analysis">
+                    <h3>Spending Healthcare Data vs Country’s GDP</h3>
+                    <div class="col-md-8 text-right" >
+                        <div class="row analysis">
+                            <div class="ggl-dashboard" id="dashboard_div2">
+                                <div class="ggl-control" id="control_div2"></div>
+                                <div id="chart_div_line_health"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <div class="analysisDataGDP-content">
+                            <p>
+                                    This chart shows that most G20 countries spend similar amounts on the healthcare as a portion of GDP.
+                                    curiously, those countries located in the European region fromm 2013 to 2018 have remained constant 
+                                    in their healthcare spending. Although the United States does not have a higher spending in Education,
+                                    it has around 16 percent of spending in healthcare.<br/><br/>
+
+                                    Particularly, China, India and most of the Asia region had had and spending in healtcare of 4 percentage
+                                    in average during the five-year period mentioned before.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Plot %Military vs GDP -->
+    <section id="analysisMilitary">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Spending Military Data vs Country’s GDP</h3>
+                <div class="col-md-8 text-left" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div3">
+                            <div class="ggl-control" id="control_div3"></div>
+                            <div id="chart_div_line_military"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            This chart shows that most G20 countries spend similar amounts on the military as a portion of GDP.
+                            Interestingly, there are a few outliers.  Notably, the United States devotes a much larger percentage of
+                            its GDP to the military than other G20 countries, while China spends a comparatively low amount on its military.
+                            <br/><br/>
+                            The data in this chart was relatively consistent in the years shown, indicating that the ratio of Military
+                            spending to GDP is fairly inelastic.  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plot Education Spending vs Military Spending -->
+    <section id="analysisEduMil">
+            <div class="container">
+                <div class="row analysis">
+                    <h3>Eduaction Spending vs Military Spending</h3>
+                    <div class="col-md-8 text-right" >
+                        <div class="row analysis">
+                            <div class="ggl-dashboard" id="dashboard_div4">
+                                <div class="ggl-control" id="control_div4"></div>
+                                <div id="chart_div_line_EvsM"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <div class="analysisDataGDP-content">
+                            <p>
+                                The chart shows that the education spending related to military spending.
+                                In most cases education expenditures have been higher than military expenditures with 
+                                the exception of two countries: China and Japan. <br/><br/>
+
+                                China has been exponentially increasing its expenditures in military. On the other hand, we 
+                                observe that at some point Japan increased its spending in education but later on this spending dropped.
+                                This same case can be observed for Turkey.
+                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Plot Healthcare Spending vs Military Spending -->
+    <section id="analysisHealthMilitary">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Healthcare Spending vs Military Spending</h3>
+                <div class="col-md-8 text-left" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div5">
+                            <div class="ggl-control" id="control_div5"></div>
+                            <div id="chart_div_line_HvsM"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            Although there are some increases in military expenditures given for China and the United States, 
+                            it is observed in the chart that the spending in military has been lower in comparison with healthcare.
+
+                            <br/><br/>
+
+                            We also can see some spikes in healthcare expenditures for countries such as China, France, Germany, Japan and the United States.
+                            Remarkable, The U.S. has been the biggest spender in healthcare and Argentina the lowest. According to the
+                            data from 2000 to 2018.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plot Education per capita vs GDP per Capita -->
+    <section id="analysisMilitaryEducation">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Education Spending vs GDP per Capita</h3>
+                <div class="col-md-8 text-right" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div6">
+                            <div class="ggl-control" id="control_div6"></div>
+                            <div id="chart_div_line_EduPCvsGDPPC"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            In a period of 6 years from 2013 to 2018, the chart shows that the educations spending
+                            per capita is significative lower in comparison to the GDP per capita. Also, It can be 
+                            observed that the expenditures in education per person have remained steadily during the 
+                            6 years. <br/><br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+    <!-- Plot Healthcare per capita vs GDP per Capita -->
+    <section id="analysisHealthGDP">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Healthcare per capita vs GDP per Capita</h3>
+                <div class="col-md-8 text-left" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div7">
+                            <div class="ggl-control" id="control_div7"></div>
+                            <div id="chart_div_line_HealtPCvsGDPPC"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            It can be observed in the chart that the healthcare expenditures for some countries are higher than from others.
+                            For instance, the United States of America had the highest spending in healthcare in comparison with the other G20 countries.
+                            <br/><br/>
+                            On the other hand, Mexico, Russia, South Africa, Turkey and China had the lowest expenditures in healthcare. Surprising,
+                            there are other countries like India and Indonesia without any expenditure in healtcare for the year 2018. However, the 
+                            India's and Indonesia's contries for the same period had GDP per capita relatively low in comparison to the other G20 countries.
+                       
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Plot Military per capita vs GDP per Capita -->
+    <section id="analysisMilitaryGDP">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Military per capita vs GDP per Capita</h3>
+                <div class="col-md-8 text-right" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div8">
+                            <div class="ggl-control" id="control_div8"></div>
+                            <div id="chart_div_line_MilitaryPCvsGDPPC"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            The chart shows that for the year 2018, some countries did not have any military expenditures.Among them 
+                            are Argentina, Brazil, Indonesia and Turkey. Some of the other countries remain the same in the military spending.
+                            For instance, the United States of America and Saudi Arabia. Although, these two contries (the U.S and Saudi Arabia) are
+                            signficantlly different in regards to the GDP per capita, both had similar military expenditures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fastest growing countries in healthcare and educational spending in fixed value -->
+    <!--Table and divs that hold the pie charts-->
+    <section id="analysisFastFix">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Fastest growing countries in healthcare and educational spending in fixed value</h3>
+                <div class="col-md-12 text-center">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            The map showed on the left side belongs to the "Fastest growing countries in healthcare spending in fixed value", 
+                            and the one located to the right side is "Fastest growing countries in educational spending in fixed values".
+                            <br/><br/>
+
+                            In both maps healtcare (left side) and education (right side), we can observe that the country with fastest growth 
+                            during the period 2013 to 2018 was China, followed by India, Saudi Arabia. 
+                       
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="col-md-12 text-center" > -->
+                    <div class="row analysis">
+                        <table class="columns">
+                            <tr>
+                            <td><div id="Sarah_chart_div" style="border: 1px solid #ccc"></div></td>
+                            <td><div id="Anthony_chart_div" style="border: 1px solid #ccc"></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Plot Fastest growing countries in healthcare and educational spending in percentage -->
+    <section id="analysisFastPerc">
+        <div class="container">
+            <div class="row analysis">
+                <h3>Fastest growing countries in healthcare and educational spending in percentage</h3>
+                <div class="col-md-8 text-right" >
+                    <div class="row analysis">
+                        <div class="ggl-dashboard" id="dashboard_div9">
+                            <div class="ggl-control" id="control_div9"></div>
+                            <div id="chart_div_line_fastGrowth"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <div class="analysisDataGDP-content">
+                        <p>
+                            In the chart we can observed the growth percentage among the nations that belong to the G20. we can 
+                            see that during the 6-year period, the education growth in percentage was significative higher for China and Indonesia. Meanwhile,
+                            for Russia and Brazil the education growth was negative.
+                            <br/><br/>
+                            In contrast, Brasil had a postive healthcare growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- foot -->
+    <section id="footer">
+        <div class="container text-center">
+            <p>Created by Cristina Giraldo <i class="fa fa-heart-o"></i> </p>
+        </div>
+    </section>
+
 </body>
 </html>
