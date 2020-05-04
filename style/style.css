@@ -115,24 +115,6 @@ that appear on the center of my page*/
 
    
 }
-/* main button: Explore more */
-/* .btn-main{
-    border: 1px solid white!important;
-    padding: 10px 30px;
-    color: white!important;
-    text-decoration: none;
-    margin-right: 5px;
-    font-size: 13px;
-    text-transform: uppercase;
-
-    margin: 0;
-    position: absolute;
-    top: 85%!important;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-} */
 
 
 .btn-one{
@@ -140,24 +122,25 @@ that appear on the center of my page*/
     font-family: "Roboto", sans-serif;
 }
 
+/* button explore */
 .btn-two{
     font-family: "Roboto", sans-serif;
 }
-
+/* button explore */
 .btn-two:hover{
     background-color: #ffaa00;
     transition: all 0.5s ease-in;
 
 }
 
-/* about */
+/* about section*/
 #about{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/crash3.jpg);
 }
-
+/* button in the section about */
 #about .btn{
     /* margin-top: 20px;
     margin-bottom: 25px; */
@@ -178,7 +161,7 @@ that appear on the center of my page*/
     text-align: justify;
 }
 
-
+/* analysis section */
 #analysis{
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/line.jpg);
     background-size: cover;
@@ -232,120 +215,119 @@ that appear on the center of my page*/
 }
 
 /* analysisDataGDP  */
-#analysisDataGDP{
+/* #analysisDataGDP{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #001b48!important;
-    background-size: cover;
+    background-size: cover; */
     
     /* background-position: center; */
-}
+/* } */
 
-.analysisDataGDP-content{
+/* .analysisDataGDP-content{
     padding-top: 20px;
     text-align: justify;
     color: #fbfcfd!important;
-}
+} */
 
 /* analysisHealth */
-#analysisHealth{
+/* #analysisHealth{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #004581!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-}
+/* } */
 
 
 /* analysisMilitary */
-#analysisMilitary{
+/* #analysisMilitary{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #018abd!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-}
+/* } */
 
 /* Education Spending & Military Spending */
-#analysisEduMil{
+/* #analysisEduMil{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #97cbdc!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-}
+/* } */
 
 /* Healthcare Spending vs Military Spending */
-#analysisHealthMilitary{
+/* #analysisHealthMilitary{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #76525c!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-}
+/* } */
 
 /* Education per capita vs GDP per Capita */
-#analysisMilitaryEducation{
+/* #analysisMilitaryEducation{
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #5c3959!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-
-}
+/* } */
 
 /* Healthcare per capita vs GDP per Capita  */
-#analysisHealthGDP{
+/* #analysisHealthGDP{
 
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #384c8b!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
 
-}
+/* } */
 
 /* Military per capita vs GDP per Capita */
-#analysisMilitaryGDP{
+/* #analysisMilitaryGDP{
 
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #142553!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
-}
+/* } */
 
 /* Fastest growing countries in healthcare and educational spending in Fix */
-#analysisFastFix{
+/* #analysisFastFix{
 
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #391924!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
 
-}
+/* } */
 
 /* Fastest growing countries in healthcare and educational spending in % */
-#analysisFastPerc{
+/* #analysisFastPerc{
 
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
     background-color: #142553!important;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center; */
+/* } */
 
-}
 /* title h3 */
 h3{
     color: white;
