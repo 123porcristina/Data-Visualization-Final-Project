@@ -160,13 +160,13 @@ that appear on the center of my page*/
 
 #about .btn{
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     height: 50px;
     position: absolute!important;
-    border: 3px solid yellow!important;
+    border: 3px solid red!important;
 
-    top: 90%!important;
+    top: 95%!important;
     -ms-transform: translateY(-50%)!important;
     transform: translateY(-50%)!important;
     
