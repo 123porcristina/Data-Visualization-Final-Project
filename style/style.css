@@ -164,6 +164,10 @@ that appear on the center of my page*/
 
     height: 50px;
     position: relative;
+
+    top: 70%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .about-content{
