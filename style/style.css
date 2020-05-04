@@ -76,12 +76,11 @@ body{
 h1{
     color: white;
     text-transform: uppercase;
-    /* font-size: 60px; */
+    font-size: 60px;
     text-align: center;
     margin-top: 275px;
     /* font: normal 175% 'century gothic', arial, sans-serif; */
 
-    /* font-size: 5vw!important; */
 }
 
 
@@ -91,10 +90,17 @@ that appear on the center of my page*/
 .button{
     margin-top: 30px;
     margin-left: 450px;
-    /* width: 100%; */
 }
 
 .btn{
+
+    margin: 0;
+    position: absolute;
+    top: 85%!important;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
     border: 1px solid white!important;
     padding: 10px 30px;
     color: white!important;
@@ -103,12 +109,7 @@ that appear on the center of my page*/
     font-size: 13px;
     text-transform: uppercase;
 
-    margin: 0;
-    position: absolute;
-    top: 85%!important;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+   
 }
 /* main button: Explore more */
 /* .btn-main{
