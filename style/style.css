@@ -76,6 +76,7 @@ h1{
     font-size: 60px;
     text-align: center;
     margin-top: 275px;
+    transform: translate(-50%, -50%);
 }
 
 
