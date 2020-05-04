@@ -159,17 +159,16 @@ that appear on the center of my page*/
 }
 
 #about .btn{
-    /* margin-top: 20px;
-    margin-bottom: 30px; */
+    margin-top: 20px;
+    margin-bottom: 30px;
 
     height: 50px;
     position: absolute!important;
     border: 3px solid yellow!important;
 
-    /* top: 90%!important; */
+    top: 90%!important;
     -ms-transform: translateY(-50%)!important;
     transform: translateY(-50%)!important;
-    bottom: 10%!important;
     
 }
 
@@ -206,7 +205,7 @@ that appear on the center of my page*/
 }
 
 .analysis{
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .icon{
