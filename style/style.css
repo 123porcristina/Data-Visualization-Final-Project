@@ -107,7 +107,7 @@ that appear on the center of my page*/
 }
 
 .btn-two:hover{
-    background-color: coral;
+    background-color: #ffaa00;
     transition: all 0.5s ease-in;
 
 }
