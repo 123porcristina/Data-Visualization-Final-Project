@@ -93,7 +93,7 @@ that appear on the center of my page*/
 
     height: 50px;
     position: relative;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .btn{
@@ -164,7 +164,7 @@ that appear on the center of my page*/
 
     height: 50px;
     position: absolute!important;
-    border: 3px solid red!important;
+    /* border: 3px solid red!important; */
 
     top: 90%!important;
     -ms-transform: translateY(-50%)!important;
