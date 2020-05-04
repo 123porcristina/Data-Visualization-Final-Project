@@ -341,9 +341,9 @@ a{
       }
      }
 
-@media all and (max-width:26.25em){
+/* @media all and (max-width:26.25em){
      .btn.btn-two{
         display:block!important;
         /* margin:0.4em auto; */
-    }
-}
+    /* }
+}  */
