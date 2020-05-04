@@ -93,7 +93,7 @@ that appear on the center of my page*/
 
     height: 50px;
     position: relative;
-    border: 3px solid green;
+    /* border: 3px solid green; */
 }
 
 .btn{
@@ -159,8 +159,11 @@ that appear on the center of my page*/
 }
 
 #about .btn{
-    margin-top: 20px;
-    margin-bottom: 30px;
+    /* margin-top: 20px;
+    margin-bottom: 30px; */
+
+    height: 50px;
+    position: relative;
 }
 
 .about-content{
