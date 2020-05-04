@@ -102,7 +102,10 @@ that appear on the center of my page*/
     margin-right: 5px;
     font-size: 13px;
     text-transform: uppercase;
+
+    text-align: center;
     display: inline-block;
+    position: relative;
 }
 
 .btn-one{
@@ -340,7 +343,7 @@ a{
 
 @media all and (max-width:26.25em){
      .btn.btn-two{
-        display:block;
+        display:block!important;
         /* margin:0.4em auto; */
     }
 }
