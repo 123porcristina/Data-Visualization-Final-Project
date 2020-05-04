@@ -108,6 +108,28 @@ that appear on the center of my page*/
     position: relative; */
     /* width: 50%; */
 }
+/* main button: Explore more */
+.btn-main{
+    border: 1px solid white!important;
+    padding: 10px 30px;
+    color: white!important;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    margin: 0!important;
+    position: absolute!important;
+    top: 75%!important;
+    left: 50%!important;
+    -ms-transform: translate(-50%, -50%)!important;
+    transform: translate(-50%, -50%)!important;
+
+    /* text-align: center;
+    display: inline-block;
+    position: relative; */
+    /* width: 50%; */
+}
 
 
 .btn-one{
@@ -117,13 +139,6 @@ that appear on the center of my page*/
 
 .btn-two{
     font-family: "Roboto", sans-serif;
-    margin: 0!important;
-    position: absolute!important;
-    top: 75%!important;
-    left: 50%!important;
-    -ms-transform: translate(-50%, -50%)!important;
-    transform: translate(-50%, -50%)!important;
-
 }
 
 .btn-two:hover{
@@ -152,7 +167,7 @@ that appear on the center of my page*/
 
 
 #analysis{
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/crash2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/crash5.jpg);
     background-size: cover;
     background-position: center;
     color: #efefef!important;
