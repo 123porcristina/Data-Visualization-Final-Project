@@ -120,7 +120,7 @@ that appear on the center of my page*/
 
 }
 @media all and (max-width:30em){
-     btn.btn-two{
+     .btn.btn-two{
         display:block;
         margin:0.4em auto;
     }
