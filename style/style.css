@@ -329,3 +329,8 @@ a{
     color: #ffffff!important;
 }
 
+@media ( max-width: 26.25em ) {
+    h1 {
+        font-size: 1.875em;
+      }
+     }
