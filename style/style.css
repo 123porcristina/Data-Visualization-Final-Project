@@ -119,6 +119,12 @@ that appear on the center of my page*/
     transition: all 0.5s ease-in;
 
 }
+@media all and (max-width:30em){
+     btn.btn-two{
+        display:block;
+        margin:0.4em auto;
+    }
+}
 
 /* about */
 #about{
