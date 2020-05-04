@@ -106,7 +106,7 @@ that appear on the center of my page*/
     /* text-align: center;
     display: inline-block;
     position: relative; */
-    width: 100%;
+    width: 50%;
 }
 /* Media Queries */
 @media (min-width: 37.5em) {
