@@ -103,13 +103,15 @@ that appear on the center of my page*/
     font-size: 13px;
     text-transform: uppercase;
 
-    /* text-align: center;
-    display: inline-block;
-    position: relative; */
-    /* width: 50%; */
+    margin: 0;
+    position: absolute;
+    top: 85%!important;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 /* main button: Explore more */
-.btn-main{
+/* .btn-main{
     border: 1px solid white!important;
     padding: 10px 30px;
     color: white!important;
@@ -120,16 +122,12 @@ that appear on the center of my page*/
 
     margin: 0;
     position: absolute;
-    top: 85%;
+    top: 85%!important;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
-    /* text-align: center;
-    display: inline-block;
-    position: relative; */
-    /* width: 50%; */
-}
+} */
 
 
 .btn-one{
@@ -167,7 +165,7 @@ that appear on the center of my page*/
 
 
 #analysis{
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/cra);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/line.jpg);
     background-size: cover;
     background-position: center;
     color: #efefef!important;
