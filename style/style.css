@@ -117,12 +117,12 @@ that appear on the center of my page*/
 
 .btn-two{
     font-family: "Roboto", sans-serif;
-    margin: 0;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: 0!important;
+    position: absolute!important;
+    top: 75%!important;
+    left: 50%!important;
+    -ms-transform: translate(-50%, -50%)!important;
+    transform: translate(-50%, -50%)!important;
 
 }
 
