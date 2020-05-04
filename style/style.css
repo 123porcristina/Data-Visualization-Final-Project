@@ -103,9 +103,9 @@ that appear on the center of my page*/
     font-size: 13px;
     text-transform: uppercase;
 
-    text-align: center;
+    /* text-align: center;
     display: inline-block;
-    position: relative;
+    position: relative; */
 }
 
 .btn-one{
