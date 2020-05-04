@@ -163,11 +163,12 @@ that appear on the center of my page*/
     margin-bottom: 30px; */
 
     height: 50px;
-    position: relative;
+    position: absolute;
 
     top: 70%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    
 }
 
 .about-content{
