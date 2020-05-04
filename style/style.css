@@ -164,7 +164,7 @@ that appear on the center of my page*/
 
     height: 50px;
     position: absolute!important;
-    border: 3px solid green;
+    border: 3px solid green!important;
 
     top: 80%!important;
     -ms-transform: translateY(-50%)!important;
