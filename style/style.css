@@ -108,14 +108,6 @@ that appear on the center of my page*/
     position: relative; */
     /* width: 50%; */
 }
-/* Media Queries */
-@media (min-width: 37.5em) {
-    width: auto; /* Smaller buttons on larger screens */
-    /* padding-left: 2rem;
-    padding-right: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem; */
-}
 
 
 .btn-one{
@@ -351,11 +343,5 @@ a{
       }
      }
 
-/* @media all and (max-width:26.25em){
-     .btn.btn-two{
-        display:block!important;
-        /* margin:0.4em auto; */
-    /* }
-}  */
 
  
