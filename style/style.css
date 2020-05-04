@@ -102,6 +102,7 @@ that appear on the center of my page*/
     margin-right: 5px;
     font-size: 13px;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .btn-one{
@@ -111,7 +112,6 @@ that appear on the center of my page*/
 
 .btn-two{
     font-family: "Roboto", sans-serif;
-    width: 100%;
 }
 
 .btn-two:hover{
