@@ -91,7 +91,7 @@ that appear on the center of my page*/
 .button{
     margin-top: 30px;
     margin-left: 450px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .btn{
@@ -111,6 +111,7 @@ that appear on the center of my page*/
 
 .btn-two{
     font-family: "Roboto", sans-serif;
+    width: 100%;
 }
 
 .btn-two:hover{
